@@ -12,7 +12,7 @@ class ListExamples {
     List<String> result = new ArrayList<>();
     for(String s: list) {
       if(sc.checkString(s)) {
-        result.add(0, s);
+        result.add(s);
       }
     }
     return result;
@@ -44,6 +44,15 @@ class ListExamples {
     }
     return result;
   }
+}
 
-
+class Check implements StringChecker{
+  
+  @Override
+  public boolean checkString(String s){
+    if(s.length()>=5){
+      return false;
+    }
+    return true;
+  }
 }
